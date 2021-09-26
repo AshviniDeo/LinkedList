@@ -56,6 +56,28 @@ public class LinkedList {
 				}
 			}
 		}
+		if(head.data != data) {
+			System.out.println("Invalid Node Details");
+		}
+		
+	}
+
+	public void searchNode(int data) {
+		Node temp = head ;
+		if(head.data == data) {
+			temp = head;
+			System.out.println("Your Data :" + temp.data);
+		}else {
+			while(temp.nextPointer != null) {
+				temp = temp.nextPointer;
+					if(temp.data == data) {
+					System.out.println("Your data :" + temp.data);
+				}
+			}
+		}
+		if(head.data != data) {
+			System.out.println("Invalid Node Details");
+		}
 		
 	}
 
