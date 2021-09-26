@@ -46,6 +46,15 @@ public class LinkedList {
 		Node prev = head;
 		if(temp.data == (data)) {
 			head = temp.nextPointer;
+		}else {
+			while(temp.nextPointer != null) {
+				prev = temp;
+				temp = temp.nextPointer;
+				if(temp.data == data) {
+					prev.nextPointer =temp.nextPointer;
+					break;
+				}
+			}
 		}
 		
 	}
