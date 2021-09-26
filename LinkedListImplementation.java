@@ -15,7 +15,7 @@ public class LinkedListImplementation {
 		
 		boolean exit = false;
 		while(!exit) {
-			System.out.println(" 1.Add Node \n 2.Print Node \n 3.Remove Node \n 4.Exit");
+			System.out.println(" 1.Add Node \n 2.Print Node \n 3.Remove Node \n 4.Search Node \n 5.Exit");
 			System.out.println("Enter your choice :");
 			int choice = scanner.nextInt();
 			switch (choice) {
@@ -40,7 +40,14 @@ public class LinkedListImplementation {
 				}
 			break;
 			
-			case 4: exit = true;
+			case 4:{System.out.println("Enter Node you want to find :");
+			   int data =scanner.nextInt();
+			   list.searchNode(data);
+				
+			}
+			break;
+			
+			case 5: exit = true;
 			break;
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + choice);
