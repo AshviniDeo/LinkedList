@@ -81,4 +81,29 @@ public class LinkedList {
 		
 	}
 
+	public void sort() {
+	 boolean swapped;
+		Node temp;
+		Node prev = null;
+		if(head == null) {
+			return;
+		}
+		do {
+			swapped = false;
+			temp = head;
+			while(temp.nextPointer != prev) {
+				if(temp.data > temp.nextPointer.data) {
+					int temporary = temp.data;
+					temp.data = temp.nextPointer.data;
+					temp.nextPointer.data = temporary;
+					swapped = true;
+				}
+				temp = temp.nextPointer;
+			}
+			prev = temp;
+		}while(swapped);
+		
+	}
+
+	
 }
