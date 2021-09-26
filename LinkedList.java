@@ -41,4 +41,13 @@ public class LinkedList {
 
 	}
 
+	public void removeNode(int data) {
+		Node temp = head;
+		Node prev = head;
+		if(temp.data == (data)) {
+			head = temp.nextPointer;
+		}
+		
+	}
+
 }
